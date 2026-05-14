@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(145deg, #0b1a33 0%, #0a1222 100%);
+    color: #eef5ff;
+    min-height: 100vh;
+}
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(18, 35, 65, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 1rem 1.8rem;
+    border-radius: 40px;
+    margin-bottom: 2rem;
+    border: 1px solid #2c4c8c;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #4d9eff;
+}
+.logo i {
+    margin-right: 8px;
+}
+.nav-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 6px 0;
+    transition: 0.2s;
+}
+.nav-links a.active, .nav-links a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #3b82f6;
+}
+.user-xp {
+    background: #1e2f4a;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+/* Сетка квеста */
+.quest-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+    flex: 1;
+}
+.info-panel, .work-area {
+    background: rgba(12, 24, 44, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 28px;
+    padding: 1.4rem;
+    border: 1px solid #2c4c8c;
+}
+.story-block p, .task-block p {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+.hint {
+    background: #0f2a44;
+    border-left: 4px solid #3b82f6;
+    padding: 10px;
+    border-radius: 14px;
+    font-size: 0.85rem;
+}
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+textarea {
+    width: 100%;
+    min-height: 220px;
+    background: #07121f;
+    border: 1px solid #2c4c8c;
+    border-radius: 16px;
+    color: #cde3ff;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 14px;
+}
+.console-box {
+    background: #030b16;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 12px;
+}
+.action-bar {
+    display: flex;
+    gap: 1rem;
+}
+.btn-primary, .btn-success, .btn-outline, .btn-danger {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-primary { background: #1e4a8a; color: white; }
+.btn-primary:hover { background: #3b82f6; transform: scale(0.97);}
+.btn-success { background: #0f6e3f; color: white; }
+.btn-success:disabled { opacity: 0.5; cursor: default; }
+.btn-outline { background: transparent; border: 1px solid #3b82f6; color: #90caf9;}
+.btn-danger { background: #a11f2f; color: white; }
+.full-width { width: 100%; margin-top: 15px;}
+.quiz-card, .setting-group, .stats-card {
+    background: #0b1a2e;
+    padding: 1rem;
+    border-radius: 24px;
+    margin-bottom: 1rem;
+}
+.quiz-options label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+@media (max-width: 700px) {
+    .quest-layout { grid-template-columns: 1fr; }
+    .nav-links a { margin: 0 8px; font-size: 0.8rem;}
+}

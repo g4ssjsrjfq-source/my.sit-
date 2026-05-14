@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeQuest | Тесты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssstyle.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="logo"><i class="fas fa-code"></i> CodeQuest</div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-laptop-code"></i> Практика</a>
+                <a href="quiz.html" class="active"><i class="fas fa-question-circle"></i> Тесты</a>
+                <a href="progress.html"><i class="fas fa-chart-line"></i> Прогресс</a>
+                <a href="settings.html"><i class="fas fa-sliders-h"></i> Настройки</a>
+            </div>
+            <div class="user-xp"><i class="fas fa-gem"></i> <span id="headerScore">0</span> XP</div>
+        </nav>
+
+        <main class="quiz-container">
+            <h2><i class="fas fa-brain"></i> Проверка теории</h2>
+            <div id="quizArea">
+                <div class="quiz-card">
+                    <p class="quiz-question">1. Что выведет console.log(typeof 42)?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q1" value="string"> string</label>
+                        <label><input type="radio" name="q1" value="number"> number</label>
+                        <label><input type="radio" name="q1" value="boolean"> boolean</label>
+                    </div>
+                </div>
+                <div class="quiz-card">
+                    <p class="quiz-question">2. Как объявить неизменяемую переменную?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q2" value="let"> let</label>
+                        <label><input type="radio" name="q2" value="var"> var</label>
+                        <label><input type="radio" name="q2" value="const"> const</label>
+                    </div>
+                </div>
+                <div class="quiz-card">
+                    <p class="quiz-question">3. Что делает функция .push() в массиве?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q3" value="удаляет"> удаляет элемент</label>
+                        <label><input type="radio" name="q3" value="добавляет"> добавляет элемент</label>
+                        <label><input type="radio" name="q3" value="сортирует"> сортирует</label>
+                    </div>
+                </div>
+            </div>
+            <button id="submitQuizBtn" class="btn-primary full-width"><i class="fas fa-save"></i> Сохранить ответы</button>
+            <div id="quizMsg" class="info-message"></div>
+        </main>
+
+    </div>
+    <script src="js_main.js"></script>
+</body>
+</html>
